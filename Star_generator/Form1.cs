@@ -17,9 +17,10 @@ namespace Star_generator
         public Form1()
         {
             InitializeComponent();
+            
+            Bt_Color_line.BackColor=Color.Black;
+            Bt_Color_fill.BackColor=Color.Silver;
             Bt_Color_fill.Enabled = false;
-            //Bt_Color_line.BackColor(Color.Black);
-            //Bt_Color_fill.BackColor();
 
         }
 
@@ -35,8 +36,14 @@ namespace Star_generator
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(CB_fill.Checked)Bt_Color_fill.Enabled = true;
-            else Bt_Color_fill.Enabled = false;
+            if (CB_fill.Checked)
+            {
+                Bt_Color_fill.Enabled = true;
+            }
+            else
+            {
+                Bt_Color_fill.Enabled = false;
+            }
         }
     }
 }
