@@ -58,17 +58,28 @@ namespace Star_generator
         {
             graphics = panel1.CreateGraphics();
             graphics.Clear(Color.White);
-            var x_0 = panel1.Width / 2;
-            var y_0 = panel1.Height / 2;
+            int x_0 = panel1.Width / 2;
+            int y_0 = panel1.Height / 2;
             int sides = Convert.ToInt32(numericUpDown1.Value);
-            var shape = new PointF[sides];
+            PointF[] shape = new PointF[sides];
 
-            var r = panel1.Height/2; 
+            float r = panel1.Height/2;
+            float r1 = r * tB_Scale.Value/10;
             for (int i = 0; i < sides; i++)
             {
-                shape[i] = new PointF(
-                    x_0 + r * (float)Math.Cos(i * 360/sides * Math.PI / 180f),
-                    y_0 + r * (float)Math.Sin(i * 360/sides * Math.PI / 180f));
+                if(i%2==0)
+                {
+                    shape[i] = new PointF(
+                    x_0 + r * (float)Math.Cos(i * 360 / sides * Math.PI / 180f),
+                    y_0 + r * (float)Math.Sin(i * 360 / sides * Math.PI / 180f));
+                }
+                else
+                {
+                    shape[i] = new PointF(
+                    x_0 + r1 * (float)Math.Cos(i * 360 / sides * Math.PI / 180f),
+                    y_0 + r1 * (float)Math.Sin(i * 360 / sides * Math.PI / 180f));
+                }
+                
             }
 
             graphics.DrawPolygon(Pens.Red, shape);
@@ -80,6 +91,11 @@ namespace Star_generator
         }
 
         private void Form1_Resize(object sender, EventArgs e)
+        {
+            draw_star();
+        }
+
+        private void tB_Scale_Scroll(object sender, EventArgs e)
         {
             draw_star();
         }

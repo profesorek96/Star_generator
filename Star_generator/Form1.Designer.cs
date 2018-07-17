@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.tB_Scale = new System.Windows.Forms.TrackBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Bt_Color_fill = new System.Windows.Forms.Button();
@@ -37,18 +37,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tB_Scale)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // trackBar1
+            // tB_Scale
             // 
-            this.trackBar1.Location = new System.Drawing.Point(5, 220);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(141, 45);
-            this.trackBar1.TabIndex = 1;
+            this.tB_Scale.Location = new System.Drawing.Point(5, 220);
+            this.tB_Scale.Margin = new System.Windows.Forms.Padding(2);
+            this.tB_Scale.Name = "tB_Scale";
+            this.tB_Scale.Size = new System.Drawing.Size(141, 45);
+            this.tB_Scale.TabIndex = 1;
+            this.tB_Scale.Scroll += new System.EventHandler(this.tB_Scale_Scroll);
             // 
             // groupBox1
             // 
@@ -59,7 +60,7 @@
             this.groupBox1.Controls.Add(this.Bt_Color_fill);
             this.groupBox1.Controls.Add(this.CB_fill);
             this.groupBox1.Controls.Add(this.Bt_Color_line);
-            this.groupBox1.Controls.Add(this.trackBar1);
+            this.groupBox1.Controls.Add(this.tB_Scale);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(487, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -123,6 +124,11 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(15, 83);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 6;
@@ -153,7 +159,7 @@
             this.Name = "Form1";
             this.Text = "Star generator";
             this.Resize += new System.EventHandler(this.Form1_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tB_Scale)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -162,7 +168,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar tB_Scale;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Bt_Color_fill;
