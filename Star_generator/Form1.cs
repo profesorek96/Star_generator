@@ -14,6 +14,7 @@ namespace Star_generator
     {
         ColorDialog line;
         ColorDialog fill_shape;
+        Graphics graphics;
         public Form1()
         {
             InitializeComponent();
@@ -23,11 +24,14 @@ namespace Star_generator
             Bt_Color_fill.Enabled = false;
             line = new ColorDialog();
             fill_shape = new ColorDialog();
+            draw_star();
+
 
         }
 
         private void Bt_Color_line_Click(object sender, EventArgs e)
         {
+            draw_star();
             line.ShowDialog();
             Bt_Color_line.BackColor = line.Color;
         }
@@ -52,7 +56,24 @@ namespace Star_generator
         }
         private void draw_star()
         {
+            graphics = panel1.CreateGraphics();
+            graphics.Clear(Color.White);
+            var x_0 = panel1.Width / 2;
+            var y_0 = panel1.Height / 2;
 
+            var shape = new PointF[12];
+
+            var r = 170; 
+
+            //Create 6 points
+            for (int a = 0; a < 6; a++)
+            {
+                shape[a] = new PointF(
+                    x_0 + r * (float)Math.Cos(a * 60 * Math.PI / 180f),
+                    y_0 + r * (float)Math.Sin(a * 60 * Math.PI / 180f));
+            }
+
+            graphics.DrawPolygon(Pens.Red, shape);
         }
     }
 }
