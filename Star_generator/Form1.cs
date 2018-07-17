@@ -21,17 +21,22 @@ namespace Star_generator
             Bt_Color_line.BackColor=Color.Black;
             Bt_Color_fill.BackColor=Color.Silver;
             Bt_Color_fill.Enabled = false;
+            line = new ColorDialog();
+            fill_shape = new ColorDialog();
 
         }
 
         private void Bt_Color_line_Click(object sender, EventArgs e)
         {
-
+            line.ShowDialog();
+            Bt_Color_line.BackColor = line.Color;
         }
 
         private void Bt_Color_fill_Click(object sender, EventArgs e)
         {
-
+            fill_shape.ShowDialog();
+            Bt_Color_fill.BackColor = fill_shape.Color;
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -44,6 +49,10 @@ namespace Star_generator
             {
                 Bt_Color_fill.Enabled = false;
             }
+        }
+        private void draw_star()
+        {
+
         }
     }
 }
