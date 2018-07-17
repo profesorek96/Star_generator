@@ -60,20 +60,28 @@ namespace Star_generator
             graphics.Clear(Color.White);
             var x_0 = panel1.Width / 2;
             var y_0 = panel1.Height / 2;
+            int sides = Convert.ToInt32(numericUpDown1.Value);
+            var shape = new PointF[sides];
 
-            var shape = new PointF[12];
-
-            var r = 170; 
-
-            //Create 6 points
-            for (int a = 0; a < 6; a++)
+            var r = panel1.Height/2; 
+            for (int i = 0; i < sides; i++)
             {
-                shape[a] = new PointF(
-                    x_0 + r * (float)Math.Cos(a * 60 * Math.PI / 180f),
-                    y_0 + r * (float)Math.Sin(a * 60 * Math.PI / 180f));
+                shape[i] = new PointF(
+                    x_0 + r * (float)Math.Cos(i * 360/sides * Math.PI / 180f),
+                    y_0 + r * (float)Math.Sin(i * 360/sides * Math.PI / 180f));
             }
 
             graphics.DrawPolygon(Pens.Red, shape);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            draw_star();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            draw_star();
         }
     }
 }
