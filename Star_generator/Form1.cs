@@ -14,7 +14,7 @@ namespace Star_generator
     {
         ColorDialog line;
         ColorDialog fill_shape;
-        Graphics graphics;
+        
         public Form1()
         {
             InitializeComponent();
@@ -56,6 +56,7 @@ namespace Star_generator
         }
         private void draw_star()
         {
+            Graphics graphics;
             graphics = panel1.CreateGraphics();
             graphics.Clear(Color.White);
             int x_0 = panel1.Width / 2;
@@ -64,7 +65,7 @@ namespace Star_generator
             PointF[] shape = new PointF[sides];
 
             float r = panel1.Height/2;
-            float r1 = r * tB_Scale.Value/10;
+            float r1 = r * tB_Scale.Value/100;
             for (int i = 0; i < sides; i++)
             {
                 if(i%2==0)

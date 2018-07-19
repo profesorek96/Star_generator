@@ -30,13 +30,13 @@
         {
             this.tB_Scale = new System.Windows.Forms.TrackBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.Bt_Color_fill = new System.Windows.Forms.Button();
             this.CB_fill = new System.Windows.Forms.CheckBox();
             this.Bt_Color_line = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tB_Scale)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -46,9 +46,11 @@
             // 
             this.tB_Scale.Location = new System.Drawing.Point(5, 220);
             this.tB_Scale.Margin = new System.Windows.Forms.Padding(2);
+            this.tB_Scale.Maximum = 100;
             this.tB_Scale.Name = "tB_Scale";
             this.tB_Scale.Size = new System.Drawing.Size(141, 45);
             this.tB_Scale.TabIndex = 1;
+            this.tB_Scale.TickFrequency = 0;
             this.tB_Scale.Scroll += new System.EventHandler(this.tB_Scale_Scroll);
             // 
             // groupBox1
@@ -71,6 +73,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Properties";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Count sides";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(15, 83);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 6;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -83,7 +112,7 @@
             // 
             // Bt_Color_fill
             // 
-            this.Bt_Color_fill.Location = new System.Drawing.Point(15, 302);
+            this.Bt_Color_fill.Location = new System.Drawing.Point(15, 316);
             this.Bt_Color_fill.Margin = new System.Windows.Forms.Padding(2);
             this.Bt_Color_fill.Name = "Bt_Color_fill";
             this.Bt_Color_fill.Size = new System.Drawing.Size(116, 32);
@@ -94,7 +123,7 @@
             // CB_fill
             // 
             this.CB_fill.AutoSize = true;
-            this.CB_fill.Location = new System.Drawing.Point(15, 269);
+            this.CB_fill.Location = new System.Drawing.Point(15, 279);
             this.CB_fill.Margin = new System.Windows.Forms.Padding(2);
             this.CB_fill.Name = "CB_fill";
             this.CB_fill.Size = new System.Drawing.Size(38, 17);
@@ -120,33 +149,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(487, 481);
             this.panel1.TabIndex = 3;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(15, 83);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Count sides";
             // 
             // Form1
             // 
