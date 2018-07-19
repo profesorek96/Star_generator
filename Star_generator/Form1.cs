@@ -90,7 +90,7 @@ namespace Star_generator
             }
             else
             {
-                graphics.FillPolygon(new SolidBrush(Color.White), shape);
+                //graphics.FillPolygon(new SolidBrush(Color.White), shape);
             }
             graphics.DrawPolygon(new Pen(Bt_Color_line.BackColor), shape);
         }

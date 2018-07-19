@@ -51,6 +51,7 @@
             this.tB_Scale.Size = new System.Drawing.Size(141, 45);
             this.tB_Scale.TabIndex = 1;
             this.tB_Scale.TickFrequency = 0;
+            this.tB_Scale.Value = 500;
             this.tB_Scale.Scroll += new System.EventHandler(this.tB_Scale_Scroll);
             // 
             // groupBox1
@@ -85,6 +86,11 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(15, 83);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             this.numericUpDown1.Minimum = new decimal(new int[] {
             3,
             0,
@@ -126,9 +132,9 @@
             this.CB_fill.Location = new System.Drawing.Point(15, 279);
             this.CB_fill.Margin = new System.Windows.Forms.Padding(2);
             this.CB_fill.Name = "CB_fill";
-            this.CB_fill.Size = new System.Drawing.Size(38, 17);
+            this.CB_fill.Size = new System.Drawing.Size(46, 17);
             this.CB_fill.TabIndex = 3;
-            this.CB_fill.Text = "Fill";
+            this.CB_fill.Text = "Fillin";
             this.CB_fill.UseVisualStyleBackColor = true;
             this.CB_fill.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
