@@ -46,7 +46,7 @@
             // 
             this.tB_Scale.Location = new System.Drawing.Point(5, 220);
             this.tB_Scale.Margin = new System.Windows.Forms.Padding(2);
-            this.tB_Scale.Maximum = 100;
+            this.tB_Scale.Maximum = 1000;
             this.tB_Scale.Name = "tB_Scale";
             this.tB_Scale.Size = new System.Drawing.Size(141, 45);
             this.tB_Scale.TabIndex = 1;

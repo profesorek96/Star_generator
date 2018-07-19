@@ -31,7 +31,6 @@ namespace Star_generator
 
         private void Bt_Color_line_Click(object sender, EventArgs e)
         {
-            
             line.ShowDialog();
             Bt_Color_line.BackColor = line.Color;
             draw_star();
@@ -66,7 +65,7 @@ namespace Star_generator
             PointF[] shape = new PointF[sides];
 
             float r = panel1.Height/2;
-            float r1 = r * tB_Scale.Value/100;
+            float r1 = r * tB_Scale.Value/1000;
             for (int i = 0; i < sides; i++)
             {
                 if(i%2==0)
