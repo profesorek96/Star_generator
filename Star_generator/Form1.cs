@@ -31,9 +31,10 @@ namespace Star_generator
 
         private void Bt_Color_line_Click(object sender, EventArgs e)
         {
-            draw_star();
+            
             line.ShowDialog();
             Bt_Color_line.BackColor = line.Color;
+            draw_star();
         }
 
         private void Bt_Color_fill_Click(object sender, EventArgs e)
@@ -83,7 +84,7 @@ namespace Star_generator
                 
             }
 
-            graphics.DrawPolygon(Pens.Red, shape);
+            graphics.DrawPolygon(new Pen(Bt_Color_line.BackColor), shape);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
