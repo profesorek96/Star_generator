@@ -40,6 +40,7 @@ namespace Star_generator
         {
             fill_shape.ShowDialog();
             Bt_Color_fill.BackColor = fill_shape.Color;
+            draw_star();
             
         }
 
@@ -53,6 +54,7 @@ namespace Star_generator
             {
                 Bt_Color_fill.Enabled = false;
             }
+            draw_star();
         }
         private void draw_star()
         {
@@ -82,7 +84,14 @@ namespace Star_generator
                 }
                 
             }
-
+            if(CB_fill.Checked==true)
+            {
+                graphics.FillPolygon(new SolidBrush(Bt_Color_fill.BackColor), shape);
+            }
+            else
+            {
+                graphics.FillPolygon(new SolidBrush(Color.White), shape);
+            }
             graphics.DrawPolygon(new Pen(Bt_Color_line.BackColor), shape);
         }
 
