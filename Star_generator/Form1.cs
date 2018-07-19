@@ -61,7 +61,7 @@ namespace Star_generator
             graphics.Clear(Color.White);
             int x_0 = panel1.Width / 2;
             int y_0 = panel1.Height / 2;
-            int sides = Convert.ToInt32(numericUpDown1.Value);
+            int sides = Convert.ToInt32(numericUpDown1.Value)*2;
             PointF[] shape = new PointF[sides];
 
             float r = panel1.Height/2;
