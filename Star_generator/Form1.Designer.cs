@@ -30,6 +30,9 @@
         {
             this.tB_Scale = new System.Windows.Forms.TrackBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nUpD_line_size = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,15 +40,15 @@
             this.CB_fill = new System.Windows.Forms.CheckBox();
             this.Bt_Color_line = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tB_Scale)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpD_line_size)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // tB_Scale
             // 
-            this.tB_Scale.Location = new System.Drawing.Point(4, 263);
+            this.tB_Scale.Location = new System.Drawing.Point(4, 240);
             this.tB_Scale.Margin = new System.Windows.Forms.Padding(2);
             this.tB_Scale.Maximum = 1000;
             this.tB_Scale.Name = "tB_Scale";
@@ -57,6 +60,8 @@
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.nUpD_line_size);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.numericUpDown1);
@@ -74,6 +79,48 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Properties";
+            // 
+            // nUpD_line_size
+            // 
+            this.nUpD_line_size.DecimalPlaces = 2;
+            this.nUpD_line_size.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.nUpD_line_size.Location = new System.Drawing.Point(75, 186);
+            this.nUpD_line_size.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nUpD_line_size.Name = "nUpD_line_size";
+            this.nUpD_line_size.Size = new System.Drawing.Size(56, 20);
+            this.nUpD_line_size.TabIndex = 10;
+            this.nUpD_line_size.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUpD_line_size.ValueChanged += new System.EventHandler(this.nUpD_line_size_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Line size";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 225);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Deformation";
             // 
             // label2
             // 
@@ -98,7 +145,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(116, 20);
             this.numericUpDown1.TabIndex = 6;
             this.numericUpDown1.Value = new decimal(new int[] {
             6,
@@ -119,7 +166,7 @@
             // 
             // Bt_Color_fill
             // 
-            this.Bt_Color_fill.Location = new System.Drawing.Point(15, 376);
+            this.Bt_Color_fill.Location = new System.Drawing.Point(15, 333);
             this.Bt_Color_fill.Margin = new System.Windows.Forms.Padding(2);
             this.Bt_Color_fill.Name = "Bt_Color_fill";
             this.Bt_Color_fill.Size = new System.Drawing.Size(116, 32);
@@ -130,7 +177,7 @@
             // CB_fill
             // 
             this.CB_fill.AutoSize = true;
-            this.CB_fill.Location = new System.Drawing.Point(18, 346);
+            this.CB_fill.Location = new System.Drawing.Point(15, 289);
             this.CB_fill.Margin = new System.Windows.Forms.Padding(2);
             this.CB_fill.Name = "CB_fill";
             this.CB_fill.Size = new System.Drawing.Size(46, 17);
@@ -158,15 +205,6 @@
             this.panel1.Size = new System.Drawing.Size(487, 481);
             this.panel1.TabIndex = 3;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 248);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Deformation";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tB_Scale)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpD_line_size)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
@@ -197,6 +236,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown nUpD_line_size;
+        private System.Windows.Forms.Label label4;
     }
 }
 

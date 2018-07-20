@@ -64,9 +64,10 @@ namespace Star_generator
             int x_0 = panel1.Width / 2;
             int y_0 = panel1.Height / 2;
             int sides = Convert.ToInt32(numericUpDown1.Value)*2;
+            float size_line = (float)nUpD_line_size.Value;
             PointF[] shape = new PointF[sides];
-
-            float r = panel1.Height/2;
+            
+            float r = (Math.Min(panel1.Height,panel1.Width)-16)/2;
             float r1 = r * tB_Scale.Value/1000;
             for (int i = 0; i < sides; i++)
             {
@@ -88,7 +89,7 @@ namespace Star_generator
             {
                 graphics.FillPolygon(new SolidBrush(Bt_Color_fill.BackColor), shape);
             }
-            graphics.DrawPolygon(new Pen(Bt_Color_line.BackColor), shape);
+            graphics.DrawPolygon(new Pen(Bt_Color_line.BackColor,size_line), shape);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -102,6 +103,11 @@ namespace Star_generator
         }
 
         private void tB_Scale_Scroll(object sender, EventArgs e)
+        {
+            draw_star();
+        }
+
+        private void nUpD_line_size_ValueChanged(object sender, EventArgs e)
         {
             draw_star();
         }
