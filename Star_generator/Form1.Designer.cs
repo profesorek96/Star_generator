@@ -37,6 +37,7 @@
             this.CB_fill = new System.Windows.Forms.CheckBox();
             this.Bt_Color_line = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tB_Scale)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -44,19 +45,19 @@
             // 
             // tB_Scale
             // 
-            this.tB_Scale.Location = new System.Drawing.Point(5, 220);
+            this.tB_Scale.Location = new System.Drawing.Point(4, 263);
             this.tB_Scale.Margin = new System.Windows.Forms.Padding(2);
             this.tB_Scale.Maximum = 1000;
             this.tB_Scale.Name = "tB_Scale";
             this.tB_Scale.Size = new System.Drawing.Size(141, 45);
             this.tB_Scale.TabIndex = 1;
-            this.tB_Scale.TickFrequency = 0;
             this.tB_Scale.Value = 500;
             this.tB_Scale.Scroll += new System.EventHandler(this.tB_Scale_Scroll);
             // 
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label1);
@@ -77,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 50);
+            this.label2.Location = new System.Drawing.Point(12, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 7;
@@ -118,7 +119,7 @@
             // 
             // Bt_Color_fill
             // 
-            this.Bt_Color_fill.Location = new System.Drawing.Point(15, 316);
+            this.Bt_Color_fill.Location = new System.Drawing.Point(15, 376);
             this.Bt_Color_fill.Margin = new System.Windows.Forms.Padding(2);
             this.Bt_Color_fill.Name = "Bt_Color_fill";
             this.Bt_Color_fill.Size = new System.Drawing.Size(116, 32);
@@ -129,7 +130,7 @@
             // CB_fill
             // 
             this.CB_fill.AutoSize = true;
-            this.CB_fill.Location = new System.Drawing.Point(15, 279);
+            this.CB_fill.Location = new System.Drawing.Point(18, 346);
             this.CB_fill.Margin = new System.Windows.Forms.Padding(2);
             this.CB_fill.Name = "CB_fill";
             this.CB_fill.Size = new System.Drawing.Size(46, 17);
@@ -140,7 +141,7 @@
             // 
             // Bt_Color_line
             // 
-            this.Bt_Color_line.Location = new System.Drawing.Point(15, 157);
+            this.Bt_Color_line.Location = new System.Drawing.Point(15, 138);
             this.Bt_Color_line.Margin = new System.Windows.Forms.Padding(2);
             this.Bt_Color_line.Name = "Bt_Color_line";
             this.Bt_Color_line.Size = new System.Drawing.Size(116, 32);
@@ -156,6 +157,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(487, 481);
             this.panel1.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 248);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Deformation";
             // 
             // Form1
             // 
@@ -186,6 +196,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

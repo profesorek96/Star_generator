@@ -88,10 +88,6 @@ namespace Star_generator
             {
                 graphics.FillPolygon(new SolidBrush(Bt_Color_fill.BackColor), shape);
             }
-            else
-            {
-                //graphics.FillPolygon(new SolidBrush(Color.White), shape);
-            }
             graphics.DrawPolygon(new Pen(Bt_Color_line.BackColor), shape);
         }
 
