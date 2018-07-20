@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tB_Scale = new System.Windows.Forms.TrackBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nUpD_line_size = new System.Windows.Forms.NumericUpDown();
@@ -40,6 +41,7 @@
             this.CB_fill = new System.Windows.Forms.CheckBox();
             this.Bt_Color_line = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tB_Scale)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUpD_line_size)).BeginInit();
@@ -177,7 +179,7 @@
             // CB_fill
             // 
             this.CB_fill.AutoSize = true;
-            this.CB_fill.Location = new System.Drawing.Point(15, 289);
+            this.CB_fill.Location = new System.Drawing.Point(15, 303);
             this.CB_fill.Margin = new System.Windows.Forms.Padding(2);
             this.CB_fill.Name = "CB_fill";
             this.CB_fill.Size = new System.Drawing.Size(46, 17);
@@ -204,6 +206,10 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(487, 481);
             this.panel1.TabIndex = 3;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -238,6 +244,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nUpD_line_size;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

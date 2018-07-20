@@ -24,7 +24,7 @@ namespace Star_generator
             Bt_Color_fill.Enabled = false;
             line = new ColorDialog();
             fill_shape = new ColorDialog();
-            draw_star();
+            timer1.Start();
 
 
         }
@@ -110,6 +110,12 @@ namespace Star_generator
         private void nUpD_line_size_ValueChanged(object sender, EventArgs e)
         {
             draw_star();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            draw_star();
+            timer1.Stop();
         }
     }
 }
