@@ -24,6 +24,8 @@ namespace Star_generator
             Bt_Color_fill.Enabled = false;
             line = new ColorDialog();
             fill_shape = new ColorDialog();
+            line.Color = Color.Black;
+            fill_shape.Color = Color.Silver;
             timer1.Start();
 
 
@@ -53,6 +55,8 @@ namespace Star_generator
             else
             {
                 Bt_Color_fill.Enabled = false;
+                //fill_shape.Color= Color.Silver;
+                Bt_Color_fill.BackColor = Color.Silver; ;
             }
             draw_star();
         }
@@ -87,9 +91,9 @@ namespace Star_generator
             }
             if(CB_fill.Checked==true)
             {
-                graphics.FillPolygon(new SolidBrush(Bt_Color_fill.BackColor), shape);
+                graphics.FillPolygon(new SolidBrush(fill_shape.Color), shape);
             }
-            graphics.DrawPolygon(new Pen(Bt_Color_line.BackColor,size_line), shape);
+            graphics.DrawPolygon(new Pen(line.Color,size_line), shape);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
