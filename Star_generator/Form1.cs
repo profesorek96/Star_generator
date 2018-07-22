@@ -51,6 +51,7 @@ namespace Star_generator
             if (CB_fill.Checked)
             {
                 Bt_Color_fill.Enabled = true;
+                Bt_Color_fill.BackColor = fill_shape.Color;
             }
             else
             {
