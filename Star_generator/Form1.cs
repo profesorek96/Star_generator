@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace Star_generator
 {
@@ -26,23 +27,28 @@ namespace Star_generator
             fill_shape = new ColorDialog();
             line.Color = Color.Black;
             fill_shape.Color = Color.Silver;
-            timer1.Start();
+
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty
+            | BindingFlags.Instance | BindingFlags.NonPublic, null,
+            panel1, new object[] { true });
+
+            panel1.Paint += (sender, e) => draw_star(e.Graphics);
 
 
-        }
+    }
 
         private void Bt_Color_line_Click(object sender, EventArgs e)
         {
             line.ShowDialog();
             Bt_Color_line.BackColor = line.Color;
-            draw_star();
+            panel1.Invalidate();
         }
 
         private void Bt_Color_fill_Click(object sender, EventArgs e)
         {
             fill_shape.ShowDialog();
             Bt_Color_fill.BackColor = fill_shape.Color;
-            draw_star();
+            panel1.Invalidate();
             
         }
 
@@ -56,15 +62,12 @@ namespace Star_generator
             else
             {
                 Bt_Color_fill.Enabled = false;
-                //fill_shape.Color= Color.Silver;
                 Bt_Color_fill.BackColor = Color.Silver; ;
             }
-            draw_star();
+            panel1.Invalidate();
         }
-        private void draw_star()
+        private void draw_star(Graphics graphics)
         {
-            Graphics graphics;
-            graphics = panel1.CreateGraphics();
             graphics.Clear(Color.White);
             int x_0 = panel1.Width / 2;
             int y_0 = panel1.Height / 2;
@@ -99,28 +102,22 @@ namespace Star_generator
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            draw_star();
+            panel1.Invalidate();
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            draw_star();
+            panel1.Invalidate();
         }
 
         private void tB_Scale_Scroll(object sender, EventArgs e)
         {
-            draw_star();
+            panel1.Invalidate();
         }
 
         private void nUpD_line_size_ValueChanged(object sender, EventArgs e)
         {
-            draw_star();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            draw_star();
-            timer1.Stop();
+            panel1.Invalidate();
         }
     }
 }
