@@ -6,7 +6,6 @@
 * [__Technologies__](#technologies)
 * [__Setup__](#setup)
 * [__Status__](#status)
-* [__Inspiration__](#inspiration)
 * [__License__](#license)
 
 ## General info
@@ -32,13 +31,13 @@ Add more general information about project. What the purpose of the project is? 
 * __Windows Forms__
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+1. Pull repository
+2. Open file ./star_generator.sln in Visual Studio 2017
+3. Build project
+4. Finished. Use this program :)
 
 ## Status
 Project is: _finished_
-
-## Inspiration
-Add here credits. Project inspired by..., based on...
 
 ## License
 See `LICENSE.md`.
