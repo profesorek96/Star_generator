@@ -1,13 +1,13 @@
 # Star generator
 >
 ## Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [License](#license)
+* [__General info__](#general-info)
+* [__Screenshots__](#screenshots)
+* [__Technologies__](#technologies)
+* [__Setup__](#setup)
+* [__Status__](#status)
+* [__Inspiration__](#inspiration)
+* [__License__](#license)
 
 ## General info
 Add more general information about project. What the purpose of the project is? Motivation?
@@ -27,9 +27,9 @@ Add more general information about project. What the purpose of the project is? 
 
 
 ## Technologies
-* C#     - 7.0
-* .NET Framework 4.6.1
-* Windows Forms
+* __C#     - 7.0__
+* __.NET Framework 4.6.1__
+* __Windows Forms__
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
