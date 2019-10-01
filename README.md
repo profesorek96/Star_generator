@@ -9,7 +9,10 @@
 * [__License__](#license)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+This application draws regular shapes. 
+
+For this purpose, it uses the Windows Forms framework panel to draw the component.
+The whole program was written in C #. The program window is responsive, e.g. when we change the size, all components scale.
 
 ## Screenshots
 ![Example screenshot animation](https://github.com/profesorek96/Star_generator/blob/master/screenshot/animation.gif)
